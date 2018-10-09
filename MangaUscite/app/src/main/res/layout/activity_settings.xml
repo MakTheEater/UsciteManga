@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
+
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:id="@+id/bgl0">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:title="Impostazioni"
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:id="@+id/bgl"
+        android:layout_marginLeft="20px"
+        android:layout_below="@+id/my_toolbar">
+
+        <TextView
+            android:id="@+id/theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:text="Tema: "
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox android:id="@+id/lightTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:layout_below="@+id/theme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:text="Chiaro"
+            android:layout_alignBottom="@+id/lightTheme"
+            android:layout_toRightOf="@+id/lightTheme"
+            android:layout_toEndOf="@+id/lightTheme" />
+
+        <CheckBox android:id="@+id/darkTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:layout_below="@+id/lightTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:text="Scuro"
+            android:layout_alignBottom="@+id/darkTheme"
+            android:layout_toRightOf="@+id/darkTheme"
+            android:layout_toEndOf="@+id/darkTheme" />
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Ordina per: "
+        android:layout_below="@+id/darkTheme"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox android:id="@+id/orderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@+id/order"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Data"
+        android:layout_alignBottom="@+id/orderDate"
+        android:layout_toRightOf="@+id/orderDate"
+        android:layout_toEndOf="@+id/orderDate" />
+
+    <CheckBox android:id="@+id/orderEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@+id/orderDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Nome"
+        android:layout_alignBottom="@+id/orderName"
+        android:layout_toRightOf="@+id/orderName"
+        android:layout_toEndOf="@+id/orderName" />
+
+    <CheckBox android:id="@+id/orderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:layout_below="@+id/orderEditor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/textEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Editore"
+        android:layout_alignBottom="@+id/orderEditor"
+        android:layout_toRightOf="@+id/orderEditor"
+        android:layout_toEndOf="@+id/orderEditor" />
+
+    <TextView
+        android:id="@+id/ColorStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Colore uscite Star Comics: "
+        android:layout_below="@+id/btnPlanet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPlanet"
+        app:layout_widthPercent="12%"
+        android:layout_below="@+id/ColorPlanet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editPlanet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        app:layout_widthPercent="78%"
+        android:layout_above="@+id/ColorStar"
+        android:layout_toRightOf="@+id/btnPlanet"
+        android:layout_toEndOf="@+id/btnPlanet" />
+
+    <TextView
+        android:id="@+id/ColorPlanet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Colore uscite Planet Manga: "
+        android:layout_below="@+id/txtName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStar"
+        app:layout_widthPercent="12%"
+        android:layout_below="@+id/ColorStar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        app:layout_widthPercent="78%"
+        android:layout_above="@+id/ColorFavourites"
+        android:layout_toRightOf="@+id/btnStar"
+        android:layout_toEndOf="@+id/btnStar" />
+
+    <TextView
+        android:id="@+id/ColorFavourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="Colore preferiti: "
+        android:layout_below="@+id/btnStar"
+        android:layout_alignLeft="@+id/btnStar"
+        android:layout_alignStart="@+id/btnStar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFavourites"
+        app:layout_widthPercent="12%"
+        android:layout_below="@+id/ColorFavourites"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editFavourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        app:layout_widthPercent="78%"
+        android:layout_alignBottom="@+id/btnFavourites"
+        android:layout_toRightOf="@+id/btnStar"
+        android:layout_toEndOf="@+id/btnStar" />
+
+    </android.support.percent.PercentRelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salva"
+        android:id="@+id/buttonSave"
+        app:layout_widthPercent="40%"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annulla"
+        android:id="@+id/buttonCancel"
+        app:layout_widthPercent="40%"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</android.support.percent.PercentRelativeLayout>

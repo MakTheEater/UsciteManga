@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_update"
+        android:title="Aggiorna"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_planet"
+        android:title="Aggiorna Planet"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_star"
+    android:title="Aggiorna Star"
+    app:showAsAction="never"/>
+
+
+    <item android:id="@+id/action_favs"
+        android:title="Preferiti"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_mfavs"
+        android:title="Gestione preferiti"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_settings"
+        android:title="Impostazioni"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:longClickable="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="2dip"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_marginTop="2dip"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <CheckBox android:id="@+id/out2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/price"
+        android:layout_alignParentRight="true"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox android:id="@+id/out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/date"
+        android:layout_alignParentRight="true"
+        android:onClick="onCheckboxClicked"
+        android:focusable="false"
+        android:clickable="false"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@+id/uscito"
+        android:text="Uscito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/out"
+        android:layout_alignBaseline="@+id/out"
+        android:layout_marginTop="2dip"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/preso"
+        android:text="Preso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/out2"
+        android:layout_alignBaseline="@+id/out2"
+        android:layout_marginTop="2dip"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+</RelativeLayout>
+
+    <!--     android:layout_alignBaseline="@+id/price"
+    android:layout_alignBaseline="@+id/price"
+    android:layout_alignParentRight="true"  -->
+
+
+    <!--android:textColor="#343434"-->
